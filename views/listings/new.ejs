@@ -1,0 +1,73 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <div class="row">
+        <div class="col-8 offset-2">
+        <h1>Add a New Location</h1>
+    <form method="post" action="/listings" novalidate class="needs-validation" > 
+        <div class="mb-3 position-relative">
+            <label for="title" class="form-label"> Title</label>
+        <input placeholder="Enter Title" name="title" class="form-control" required>
+        <div class="valid-tooltip">
+            Looks good!
+          </div>
+          <div class="invalid-tooltip">
+            Add Title
+          </div>
+        </div>
+        
+       <div class="mb-3 position-relative">
+        <label for="description" class="form-label"> description</label>
+        <textarea name="description"  class="form-control" required ></textarea>
+        <div class="invalid-tooltip">
+           Please add some discription
+          </div>
+       </div>
+       
+
+    <div class="mb-3">
+        <label for="image" class="form-label"> Image link</label>
+        <input placeholder="add image link" name="image" type="text" class="form-control">
+    </div>
+    
+    <div class="row">
+        <div  class="mb-3 col-md-4 position-relative">
+            <label for="price" class="form-label"> price</label>
+            <input placeholder="enter price"  name="price" class="form-control" required >
+            <div class="invalid-tooltip">
+                Add Price
+              </div>
+        </div>
+
+
+        <div class="mb-3 col-md-8 position-relative">
+            <label for="country" class="form-label"> country</label>
+            <input placeholder="country" name="country" class="form-control" required >
+            <div class="invalid-tooltip">
+                Add Country
+              </div>
+           </div>
+
+
+    </div>
+    
+        <div class="mb-3 position-relative">
+            <label for="location" class="form-label"> location</label>
+
+            <input placeholder="location" name="location" class="form-control"  required>
+            <div class="invalid-tooltip">
+                Add Location
+              </div>
+        </div>
+       
+     
+        <br><br>
+        
+        <button class="btn btn-dark add-btn">Add</button>
+<br><br>
+
+    </form>
+</div>
+    </div>
+    
+    
+</body>

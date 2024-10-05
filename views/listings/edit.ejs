@@ -1,0 +1,77 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <div class="row mt-3">
+        <div class="col-8 offset-2" >
+    <h1>EDIT YOUR LISTINGS</h1>
+    <form method="post" action="/listings/<%=listing._id%>?_method=put" novalidate class="needs-validation"> 
+        <div class="mb-3 position-relative">
+            <label for="title" class="form-label"> Title</label>
+            <input value="<%=listing.title%>" name="title" class="form-control" required >
+            <div class="invalid-tooltip">
+                Add Title
+              </div>
+        </div>
+
+        <div class="mb-3 position-relative">
+            <label for="description" class="form-label"> description</label>
+            <textarea name="description"class="form-control" required ><%=listing.description%></textarea>
+            <div class="invalid-tooltip">
+                Add Description
+              </div>
+        </div>
+
+        <div class="mb-3 position-relative">
+            <label for="image" class="form-label"> Image</label>
+            <input value="<%=listing.image%>" name="image" class="form-control" required>
+            <div class="invalid-tooltip">
+                Add Image
+              </div>
+        </div>
+  <div class="row"> 
+    <div class="mb-3 col-md-4 position-relative">
+        <label for="price" class="form-label"> Price</label>
+        <input value="<%=listing.price%>" class="form-control" name="price" required>
+        <div class="invalid-tooltip">
+            Add Price
+          </div>
+    </div>
+
+
+    <div class="mb-3 col-md-8 position-relative">
+        <label for="country" class="form-label"> Country</label>
+        <input value="<%=listing.country%>" name="country" class="form-control" required>
+        <div class="invalid-tooltip">
+            Add Country
+          </div>
+    </div>
+
+
+  </div>
+        
+
+        
+       
+        <div class="mb-3 position-relative">
+            <label for="location" class="form-label"> Location</label>
+            <input value="<%=listing.location%>" class="form-control" name="location" required>
+            <div class="invalid-tooltip">
+                Add Location
+              </div>
+        </div>
+
+
+      
+        
+        
+        
+        
+        
+      
+        <button class="btn btn-dark edit-btn mt-3">Edit</button>
+
+<br><br>
+    </form>
+</div>
+</div>
+    
+</body>
